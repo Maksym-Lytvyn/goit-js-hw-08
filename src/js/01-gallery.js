@@ -18,6 +18,7 @@ const galleryContainer = document.querySelector(".gallery");
    "" 
  ); 
   
+
  galleryContainer.insertAdjacentHTML("beforeend", markup); 
   
  const lightbox = new SimpleLightbox(".gallery a", { 
