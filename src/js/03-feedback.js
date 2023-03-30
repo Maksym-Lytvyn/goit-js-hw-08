@@ -9,6 +9,8 @@ const data = {
     message: null
     }
 
+
+
 emailInput.addEventListener('input', _throttle(function (event) {
     data.email = event.target.value;
     localStorage.setItem('feedback-form-state', JSON.stringify(data))
