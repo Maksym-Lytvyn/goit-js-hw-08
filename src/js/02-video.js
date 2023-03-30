@@ -17,7 +17,6 @@ iframePlayer.getCurrentTime().then(function (seconds){
 })
 
 
-
 const currentTime = localStorage.getItem('videoplayer-current-time');
 const parsedTime = JSON.parse(currentTime);
 iframePlayer.setCurrentTime(parsedTime);
