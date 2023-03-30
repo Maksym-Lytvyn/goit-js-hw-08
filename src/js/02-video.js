@@ -18,11 +18,10 @@ iframePlayer.getCurrentTime().then(function (seconds){
 
 
 
-window.onload = function(){
-    const currentTime = localStorage.getItem('videoplayer-current-time');
-    const parsedTime = JSON.parse(currentTime);
-    iframePlayer.setCurrentTime(parsedTime);
-}
+const currentTime = localStorage.getItem('videoplayer-current-time');
+const parsedTime = JSON.parse(currentTime);
+iframePlayer.setCurrentTime(parsedTime);
+
 
 iframePlayer.on('timeupdate', _throttle(function(e) {
     console.log("time1", e);
