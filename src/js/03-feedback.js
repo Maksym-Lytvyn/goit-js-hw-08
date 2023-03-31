@@ -17,13 +17,15 @@
      localStorage.setItem(LOCAL_KEY, JSON.stringify(data))
  }, 500))
 
+ function clearStorage(){
+    localStorage.removeItem(LOCAL_KEY);
+ }
 
  form.addEventListener('submit', (event) => {
      event.preventDefault();
-     console.log(data);
-     emailInput.value = '';
-     messageInput.value = '';
+     console.log(localStorage.getItem(LOCAL_KEY));
      event.currentTarget.reset();
+     clearStorage();
  })
 
  window.onload = function() {
@@ -33,10 +35,6 @@
      if (parsedResult) {
          emailInput.value = parsedResult.email;
          messageInput.value = parsedResult.message;
-     }
-     else {
-         emailInput.value = '';
-         messageInput.value = '';
      }
     
  }
